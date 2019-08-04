@@ -1,0 +1,317 @@
+/*
+ * SEKCE POPUP
+ */
+
+.popup-module-right {
+	margin-top: 20px;
+}
+
+.popup-background {
+left: 0px;
+top: 0px;
+position: fixed;
+width: 100%;
+height: 100%;
+background-color: black;
+display: none;
+opacity: 0.5;
+z-index: 10;
+}
+
+.popup-window {
+position: fixed;
+width: 800px;
+height: auto;
+transform: translate(-50%,-50%);
+left: 50%;
+top: 50%;
+background-color: white;
+display: none;
+box-shadow: 2px 1px 8px black;
+border-radius: 4px;
+max-width: 94%;
+z-index: 10;
+padding: 20px 20px 10px 20px;
+overflow: auto;
+box-sizing: border-box;
+max-height: 87vh;
+-webkit-overflow-scrolling: touch;
+font-size: 16px;
+}
+
+.popup-window .cross {
+  position: absolute !important;
+  width: 15px !important;
+  height: 15px !important;
+  right: 15px !important;
+  top: 15px !important;
+  cursor: pointer;
+	border: 0px !important;
+}
+
+
+.popup-button {
+	padding: 0.5em 1em 0.5em 1em;
+    color: white;
+    font-size: 18px;
+    background-color: #eb3323;
+    border-radius: 10px;
+    font-family: "light", initial;
+    border: 2px solid #eb3323;
+    transition: 0.3s;
+		cursor: pointer;
+		margin-bottom: 0.5em;
+		outline: none;
+}
+
+.popup-button:hover {
+    color: #eb3323;
+	background-color: #fff;
+}
+
+.darkness {
+  display: block !important;
+  animation-name: darkness;
+  animation-duration: 1s;
+}
+
+.lightness {
+  animation-name: lightness;
+  animation-duration: 0.3s;
+  display: block !important;
+  }
+
+/* The animation code */
+@keyframes darkness {
+    0% {opacity: 0.0;}
+    100% {opacity: 0.5;}
+}
+
+/* The animation code */
+@keyframes lightness {
+    0% {opacity: 0.5;}
+    100% {opacity: 0.0;}
+}
+
+
+.swift  {
+  display: block !important;
+  animation-name: swiftDown;
+  animation-duration: 0.3s;
+}
+
+.swift2 {
+  display: block !important;
+  animation-name: swiftUp;
+  animation-duration: 0.3s;
+  }
+
+/* The animation code */
+@keyframes swiftUp {
+    0% {top: 50%;
+        opacity: 1;}
+    100% {top: 45%;
+          opacity: 0;
+          }
+}
+
+/* The animation code */
+@keyframes swiftDown {
+    0% {top: 45%;
+        opacity: 0;}
+    100% {top: 50%;
+          opacity: 1;}
+}
+
+/*
+ * KONEC SEKCE POPUP
+ */
+
+/*
+ * POPUP FORM STYLY
+ */
+
+.hell_cf7_pp_button {display: none !important;}
+
+.close {
+	display: none !important;
+}
+
+.popup-window .text-center h2 {
+	text-align: center;
+	line-height: 1.2em;
+	font-size: 1.8em;
+	font-family: "light", inherit;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.popup-window .text-center p {
+    text-align: center;
+	line-height: 1.2em;
+	font-size: 1.1em;
+	font-family: "light", inherit;
+	margin: 0px;
+	padding-bottom: 20px;
+	}
+
+.popup-window .text-center .row {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 15px;
+}
+
+.popup-window .text-center .row label {
+	font-family: "light", inherit;
+}
+
+.popup-window .text-center .row .col-sm-6 input{
+	padding: 10px 10px 10px 10px;
+	width: 100%;
+	font-size: 0.9em;
+	outline: none;
+	border: 1px solid #d9dadb;
+}
+
+.popup-window .text-center .row .col-sm-6 input:focus {
+border: 1px solid black;
+}
+
+.popup-window .input-select select {
+	margin-top: 5px;
+	height: 2.6em;
+	font-size: 0.9em;
+	width: 100%;
+	border: 1px solid #d9dadb;
+	outline: none;
+	padding-left: 10px;
+	background-color: #f8f8f8;
+}
+
+.popup-window .input-select {
+ width: 300px;
+ max-width: 100%;
+ padding-bottom: 5px;
+}
+
+.popup-window .input-select p {
+	line-height: 1px;
+	padding: 0px;
+}
+
+.popup-window .disable-submit {
+	border: 1px solid #999999 !important;
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor: not-allowed !important;
+}
+
+.popup-window .text-center .wpcf7-submit {
+	background-color: #b2b957;
+	border: 1px solid #b2b957;
+	padding: 0.5em 2em;
+	color: #fff;
+	border-radius: 4px;
+	float: right;
+}
+
+.popup-window .text-center .wpcf7-submit, .popup-window .text-center .wpcf7-submit:active, .popup-window .text-center .wpcf7-submit:focus {
+outline: none;
+}
+
+.popup-window .text-center .wpcf7-submit:hover {
+	color: #b2b957;
+	background-color: #fff;
+}
+
+.popup-window .test {
+	text-align: left !important;
+	line-height: 1.4em !important;
+	margin: 0px;
+	margin-bottom: 15px!important;
+}
+
+.popup-window .referentfield {
+	margin-left: 0px;
+	margin-top: 15px;
+}
+
+.popup-window .referentfield input {
+	margin-top: 5px;
+}
+
+.popup-window .text-center .wpcf7-list-item {
+	margin: 0px;
+}
+
+.popup-window .wpcf7-response-output {
+	display: block;
+    width: 100%;
+    position: relative;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    color: black;
+    border-radius: 4px;
+    bottom: 0px;
+    font-size: 18px;
+	line-height:20px;
+	border: 0px;
+}
+
+.popup-window .submit-container {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+
+.popup-window .wpcf7-not-valid-tip {
+	padding-top: 5px;
+	font-size: 14px;
+	display: inline-block;
+	color: #f00 !important;
+}
+
+@media screen and (max-width: 750px) {
+.popup-window	.input-select:nth-child(odd) {
+	margin-right: 20px;
+}
+}
+
+@media screen and (max-width: 500px) {
+.popup-window	.text-center .row {
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 0px;
+}
+
+.popup-window	.input-select {
+ padding-bottom: 15px;
+}
+
+.popup-window .input-select:nth-child(odd) {
+	margin-right: 0px;
+}
+
+.popup-window .text-center .row .col-sm-6 input, .text-center select {
+	font-size: 1.3em;
+}
+
+.body-fixed {
+	position: fixed;
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+		.popup-button {
+	width: 100%;
+}
+}
+
+/*
+ * KONEC POPUP FORM STYLY
+ */
