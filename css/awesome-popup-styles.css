@@ -31,16 +31,16 @@ box-shadow: 2px 1px 8px black;
 border-radius: 4px;
 max-width: 94%;
 z-index: 10;
-padding: 20px 20px 10px 20px;
+padding: 20px 30px 10px 30px;
 overflow: auto;
 box-sizing: border-box;
-max-height: 87vh;
+max-height: 95vh;
 -webkit-overflow-scrolling: touch;
 font-size: 16px;
 }
 
 .popup-window .cross {
-  position: absolute !important;
+  position: fixed !important;
   width: 15px !important;
   height: 15px !important;
   right: 15px !important;
@@ -50,7 +50,7 @@ font-size: 16px;
 }
 
 
-.popup-button {
+.popup-button-style {
 	padding: 0.5em 1em 0.5em 1em;
     color: white;
     font-size: 18px;
@@ -64,7 +64,7 @@ font-size: 16px;
 		outline: none;
 }
 
-.popup-button:hover {
+.popup-button-style:hover {
     color: #eb3323;
 	background-color: #fff;
 }

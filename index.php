@@ -5,10 +5,10 @@ Plugin URI:
 Description: Easy way to create popup in wordpress with variable content.
 Author: David Zoufalý
 Author URI:
-Version: 1.1
+Version: 1.12
 */
 
-function enqueue_it_all() {
+function enqueue_it_all_ap() {
   wp_register_style('popup-styly', plugin_dir_url( __FILE__ ) . 'css/awesome-popup-styles.css');
   wp_enqueue_style('popup-styly');
 
@@ -16,19 +16,22 @@ function enqueue_it_all() {
   wp_enqueue_script('popup-scripty');
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_it_all');
+add_action('wp_enqueue_scripts', 'enqueue_it_all_ap');
 
 function popup($atts, $content = null) {
     $a = shortcode_atts( array(
         'value' => 'Nezávazná registrace',
-        'class' =>  null
+        'class' =>  '',
+        'btn-style' =>  ''
     ),
-
     $atts
   );
-    return "<button class='popup-button ".$a['class']."' onClick='reply_click(this.id)' id='give-me-popup'>".$a['value']."</button>"
-    ."<div class='popup-background' id='popup-background'>"."</div>"
-    ."<div class='popup-window' id='popup-window'>".do_shortcode($content)."<img class='cross' id='cross' src='".plugin_dir_url( __FILE__ ).'gallery/cancel.svg'."'>"."</div>";
+
+  $a['btn-style'] === 'yes' ? $class = 'popup-button-style' : $class = '';
+
+  return "<button class='popup-button ".$class." ".$a['class']."' onClick='reply_click(this.id)' id='give-me-popup'>".$a['value']."</button>"
+  ."<div class='popup-background' id='popup-background'>"."</div>"
+  ."<div class='popup-window' id='popup-window'>".do_shortcode($content)."<img class='cross' id='cross' src='".plugin_dir_url( __FILE__ ).'gallery/cancel.svg'."'>"."</div>";
 }
 
 add_shortcode( 'popup', 'popup' );
