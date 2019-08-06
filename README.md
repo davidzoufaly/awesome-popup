@@ -17,3 +17,6 @@ Popup / modal window wordpress plugin
 
 ### Example
 [popup value="Registration" class="button button--blue"][contact form shortcode][/popup]
+
+## License 
+- MIT
