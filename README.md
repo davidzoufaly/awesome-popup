@@ -7,7 +7,7 @@ Popup / modal window wordpress plugin
 
 ## Functionality
 - use shortcode [popup]Content here[/popup] anywhere in content area
-- use <?php do_shortcode('[popup]Content here[/popup]') ?> in theme template
+- use <?php echo do_shortcode('[popup]Content here[/popup]') ?> in theme template
 - you can use multiple shorcodes with different content in one page. 
 
 ### Shortcode atts
