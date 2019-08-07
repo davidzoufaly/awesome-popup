@@ -63,9 +63,10 @@
     prirazenyCross.addEventListener("click", zavriPopup);
     prirazenyBackground.addEventListener("click", zavriPopup);
   }
-
-    giveMe.setAttribute("id", "give-me-popup-" + o);
-    popupWindow.setAttribute("id", "popup-window-" + o);
-    popupBackground.setAttribute("id", "popup-background-" + o);
-    cross.setAttribute("id", "cross-" + o);
-  }
+    if(giveMe) {
+      giveMe.setAttribute("id", "give-me-popup-" + o);
+      popupWindow.setAttribute("id", "popup-window-" + o);
+      popupBackground.setAttribute("id", "popup-background-" + o);
+      cross.setAttribute("id", "cross-" + o);
+    }
+    }
