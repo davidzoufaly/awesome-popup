@@ -34,7 +34,7 @@ z-index: 10;
 padding: 20px 30px 10px 30px;
 overflow: auto;
 box-sizing: border-box;
-max-height: 95vh;
+max-height: 85vh;
 -webkit-overflow-scrolling: touch;
 font-size: 16px;
 }

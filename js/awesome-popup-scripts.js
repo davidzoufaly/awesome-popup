@@ -17,7 +17,6 @@
     vytvorPopup();
 
     function vytvorPopup() {
-
       prirazenyBackground.classList.add("darkness");
       prirazenyBackground.classList.remove("lightness");
       prirazenyPopup.classList.add("swift");
@@ -36,6 +35,7 @@
 
           var wpcf7Elm = document.querySelector( '.wpcf7' );
 
+          //not working
           wpcf7Elm.addEventListener('wpcf7submit' || 'wpcf7spam' || 'wpcf7mailfailed' || 'wpcf7mailsent' || 'wpcf7invalid', function( event ) {
 
           document.querySelector('.wpcf7-submit').removeAttribute("disabled", "");
