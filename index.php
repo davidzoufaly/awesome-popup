@@ -22,17 +22,23 @@ function popup($atts, $content = null) {
     $a = shortcode_atts( array(
         'value' => 'Nezávazná registrace',
         'class' =>  '',
-        'btn-style' =>  ''
+        'btn-style' =>  '',
+        'atts' => '',
+        'btn' => '',
     ),
     $atts
   );
 
   $a['btn-style'] === 'yes' ? $class = 'popup-button-style' : $class = '';
 
-  return "<button class='popup-button ".$class." ".$a['class']."' onClick='reply_click(this.id)' id='give-me-popup'>".$a['value']."</button>"
-  ."<div class='popup-background' id='popup-background'>"."</div>"
-  ."<div class='popup-window' id='popup-window'>".do_shortcode($content)."<img class='cross' id='cross' src='".plugin_dir_url( __FILE__ ).'gallery/cancel.svg'."'>"."</div>";
+  if ($a['btn'] === 'no') {
+    return "<div class='popup-background' id='popup-background'>"."</div>"
+  ."<div class='popup-window' id='popup-window'>".do_shortcode($content)."<span class='cross' id='cross' style='background-image: url(".plugin_dir_url( __FILE__ )."gallery/cancel.svg)'></span>"."</div>";
+  } else {
+    return "<button ".$a['atts']." class='popup-button ".$class." ".$a['class']."' onClick='reply_click(this.id)' id='give-me-popup'>".$a['value']."</button>"
+    ."<div class='popup-background' id='popup-background'>"."</div>"
+    ."<div class='popup-window' id='popup-window'>".do_shortcode($content)."<span class='cross' id='cross' style='background-image: url(".plugin_dir_url( __FILE__ )."gallery/cancel.svg)'></span>"."</div>";
+  }
 }
-
 add_shortcode( 'popup', 'popup' );
 ?>

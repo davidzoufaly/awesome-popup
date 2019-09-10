@@ -15,7 +15,7 @@ height: 100%;
 background-color: black;
 display: none;
 opacity: 0.5;
-z-index: 10;
+z-index: 50;
 }
 
 .popup-window {
@@ -30,23 +30,31 @@ display: none;
 box-shadow: 2px 1px 8px black;
 border-radius: 4px;
 max-width: 94%;
-z-index: 10;
+z-index: 100;
 padding: 20px 30px 10px 30px;
 overflow: auto;
 box-sizing: border-box;
-max-height: 85vh;
+max-height: 92vh;
 -webkit-overflow-scrolling: touch;
 font-size: 16px;
 }
 
+@media screen and (max-width: 600px) {
+	.popup-window {
+		max-height: 85vh;
+	}
+}
+
 .popup-window .cross {
   position: fixed !important;
-  width: 15px !important;
-  height: 15px !important;
-  right: 15px !important;
-  top: 15px !important;
+  width: 17px !important;
+  height: 17px !important;
+  right: 17px !important;
+  top: 17px !important;
   cursor: pointer;
-	border: 0px !important;
+  border: 0px !important;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 
@@ -84,12 +92,12 @@ font-size: 16px;
 /* The animation code */
 @keyframes darkness {
     0% {opacity: 0.0;}
-    100% {opacity: 0.5;}
+    100% {opacity: 0.8;}
 }
 
 /* The animation code */
 @keyframes lightness {
-    0% {opacity: 0.5;}
+    0% {opacity: 0.8;}
     100% {opacity: 0.0;}
 }
 
@@ -133,7 +141,7 @@ font-size: 16px;
 
 .hell_cf7_pp_button {display: none !important;}
 
-.close {
+.popup-windo .close {
 	display: none !important;
 }
 
@@ -252,11 +260,8 @@ outline: none;
     padding: 0px 0px 0px 0px;
     text-align: center;
     color: black;
-    border-radius: 4px;
     bottom: 0px;
     font-size: 18px;
-	line-height:20px;
-	border: 0px;
 }
 
 .popup-window .submit-container {

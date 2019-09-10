@@ -1,11 +1,12 @@
   var pocetVyskytuButton = document.getElementsByClassName('popup-button').length;
+  var popupWindowNumber = document.querySelectorAll(".popup-window").length;
+  
 
-  var o;
-  for (o = 1; o <= pocetVyskytuButton; o++) {
+  for (let o = 1; o <= popupWindowNumber; o++) {
     var cross = document.getElementById("cross");
     var popupBackground = document.getElementById("popup-background");
-    var popupWindow = document.getElementById("popup-window");
     var giveMe = document.getElementById("give-me-popup");
+    var popupWindow = document.getElementById("popup-window");
 
   function reply_click(clicked_id){
     var lastCharButton = clicked_id.substr(clicked_id.length - 1);
@@ -63,8 +64,8 @@
     prirazenyCross.addEventListener("click", zavriPopup);
     prirazenyBackground.addEventListener("click", zavriPopup);
   }
-    if(giveMe) {
-      giveMe.setAttribute("id", "give-me-popup-" + o);
+    if(giveMe || popupWindow) {
+      giveMe ? giveMe.setAttribute("id", "give-me-popup-" + o) : null;
       popupWindow.setAttribute("id", "popup-window-" + o);
       popupBackground.setAttribute("id", "popup-background-" + o);
       cross.setAttribute("id", "cross-" + o);
