@@ -39,6 +39,10 @@ max-height: 92vh;
 font-size: 16px;
 }
 
+.popup-window .wpcf7 {
+	padding: 0;
+}
+
 @media screen and (max-width: 600px) {
 	.popup-window {
 		max-height: 85vh;
