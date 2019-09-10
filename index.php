@@ -5,7 +5,8 @@ Plugin URI:
 Description: Easy way to create popup in wordpress with variable content.
 Author: David Zoufalý
 Author URI: https://davidzoufaly.cz
-Version: 1.2
+Version: 1.2.10.9.2019
+Date updated: 
 */
 
 function enqueue_it_all_ap() {
