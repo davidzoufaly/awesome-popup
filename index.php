@@ -4,8 +4,8 @@ Plugin Name: Awesome Poop-up
 Plugin URI:
 Description: Easy way to create popup in wordpress with variable content.
 Author: David Zoufalý
-Author URI:
-Version: 1.12
+Author URI: https://davidzoufaly.cz
+Version: 1.2
 */
 
 function enqueue_it_all_ap() {
@@ -22,16 +22,16 @@ function popup($atts, $content = null) {
     $a = shortcode_atts( array(
         'value' => 'Nezávazná registrace',
         'class' =>  '',
-        'btn-style' =>  '',
+        'btn-style' => false,
         'atts' => '',
-        'btn' => '',
+        'btn' => true,
     ),
     $atts
   );
 
-  $a['btn-style'] === 'yes' ? $class = 'popup-button-style' : $class = '';
+  $a['btn-style'] === true ? $class = 'popup-button-style' : $class = '';
 
-  if ($a['btn'] === 'no') {
+  if ($a['btn'] === false) {
     return "<div class='popup-background' id='popup-background'>"."</div>"
   ."<div class='popup-window' id='popup-window'>".do_shortcode($content)."<span class='cross' id='cross' style='background-image: url(".plugin_dir_url( __FILE__ )."gallery/cancel.svg)'></span>"."</div>";
   } else {
