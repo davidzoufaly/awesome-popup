@@ -5,7 +5,7 @@ Plugin URI:
 Description: Easy way to create popup in wordpress with variable content.
 Author: David Zoufalý
 Author URI: https://davidzoufaly.cz
-Version: 1.2.10.9.2019
+Version: 1.3.12.9.2019
 Date updated: 
 */
 
@@ -23,16 +23,16 @@ function popup($atts, $content = null) {
     $a = shortcode_atts( array(
         'value' => 'Nezávazná registrace',
         'class' =>  '',
-        'btn-style' => false,
+        'btn-style' => "false",
         'atts' => '',
-        'btn' => true,
+        'btn' => "true",
     ),
     $atts
   );
 
-  $a['btn-style'] === true ? $class = 'popup-button-style' : $class = '';
+  $a['btn-style'] === "true" ? $class = 'popup-button-style' : $class = '';
 
-  if ($a['btn'] === false) {
+  if ($a['btn'] === "false") {
     return "<div class='popup-background' id='popup-background'>"."</div>"
   ."<div class='popup-window' id='popup-window'>".do_shortcode($content)."<span class='cross' id='cross' style='background-image: url(".plugin_dir_url( __FILE__ )."gallery/cancel.svg)'></span>"."</div>";
   } else {
